@@ -20,12 +20,12 @@ AS400 holds core banking records, and Oracle holds CRM data. TapData replicates 
 ## Prerequisites
 
 - Git, npm, and Node.js 22.9+ or 20.18+ for the dashboard.
-- IBM i / AS400 (DB2 for i) and Oracle with demo schemas and sample data.
-- TapData and MongoDB, with network access and permissions for CDC, transformations, and API publishing.
+- IBM i / AS400 (DB2 for i) and Oracle databases with demo schemas and sample data. Partners using Tapdata-hosted databases do not need to prepare these.
+- Access to the TapData APIs from the environment where the AI dashboard is deployed.
 - Published TapData API URLs and authentication credentials accessible from the dashboard host.
-- A DeepSeek or OpenAI API key and provider connectivity for live AI features.
+- Optional: A DeepSeek or OpenAI API key and provider connectivity for live AI features.
 
-The complete demo uses two repositories: **BankStream Feeder** for source preparation, activity, integration, and APIs, and **BankStream_AI_Dashboard** for the user interface. The Feeder repository includes the TapData tasks, configuration files, and setup instructions. Each repository documents its own setup requirements.
+The complete demo uses two repositories: **BankStream Feeder** simulates banking activity in the AS400 and Oracle source databases, including KYC updates, account balance changes, and transaction inserts. **BankStream_AI_Dashboard** displays these updates in real time. The Feeder repository also includes source database preparation, TapData tasks, configuration files, and setup instructions. Each repository documents its own setup requirements.
 
 ## Deployment Guide
 
