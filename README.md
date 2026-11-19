@@ -75,7 +75,7 @@ For source database and TapData pipeline setup, follow the [BankStream Feeder RE
 
    **TapData-Hosted**
 
-   Use these URLs only if TapData hosts both your TapData environment and your source databases.
+   Use these URLs only if TapData hosts your TapData environment.
 
    ```ini
    TAPDATA_API_BASE_URL=http://113.98.206.139:43080
@@ -84,7 +84,7 @@ For source database and TapData pipeline setup, follow the [BankStream Feeder RE
 
    **Self-Hosted**
 
-   Configure all relevant `.env` variables for your own TapData deployment and source databases. These URLs are examples for a local deployment. Use your own hosts and ports as needed.
+   Configure all relevant `.env` variables for your own TapData deployment. These URLs are examples for a local deployment. Use your own hosts and ports as needed.
 
    ```ini
    TAPDATA_API_BASE_URL=http://127.0.0.1:3080
