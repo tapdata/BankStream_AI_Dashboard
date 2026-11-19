@@ -67,21 +67,40 @@ For source database and TapData pipeline setup, follow the [BankStream Feeder RE
 
 5. **Optional: enable AI Analysis and AI Chat.** In `.env`, set `AI_PROVIDER`, `AI_MODEL`, `AI_BASE_URL`, and your provider's key: `DEEPSEEK_API_KEY` or `OPENAI_API_KEY`. See [.env.example](.env.example) for examples. You can skip this step to view dashboard data and run `npm test`.
 
-6. **Run tests and start the dashboard.** If you chose `demo`, no TapData credentials are needed. If you chose `tapdata`, first set these four values in `.env`:
+6. **Run tests and start the dashboard.** If you chose `demo`, no TapData credentials are needed.
+
+   **TapData API Configuration**
+
+   If you chose `tapdata`, use the URLs for your deployment in `.env`.
+
+   **TapData-Hosted**
+
+   Use these URLs only if TapData hosts both your TapData environment and your source databases.
 
    ```ini
-   # Partners using TapData-hosted databases and the TapData Console UI to publish APIs:
-   # Use public IP 113.98.206.139 as the host in both URLs below. Use the ports provided by TapData and keep the URL paths unchanged.
- 
- 
-   # Partners using their own database and TapData environment: use your own TapData host IP and ports in both URLs.
+   TAPDATA_API_BASE_URL=http://113.98.206.139:43080
+   TAPDATA_TOKEN_URL=http://113.98.206.139:43030/oauth/token
+   ```
+
+   **Self-Hosted**
+
+   Configure all relevant `.env` variables for your own TapData deployment and source databases. These URLs are examples for a local deployment. Use your own hosts and ports as needed.
+
+   ```ini
    TAPDATA_API_BASE_URL=http://127.0.0.1:3080
    TAPDATA_TOKEN_URL=http://127.0.0.1:3030/oauth/token
+   ```
+
+   **Client credentials**
+
+   For either deployment, log in to your TapData environment and go to **Data Service → API Client**. Find the API Client ID and Client Secret and use them in `.env`.
+
+   ```ini
    TAPDATA_CLIENT_ID=YOUR_TAPDATA_CLIENT_ID
    TAPDATA_CLIENT_SECRET=YOUR_TAPDATA_CLIENT_SECRET
    ```
 
-   Use your real client ID and secret. Change the URLs if TapData runs on another computer or different ports. Keep the other TapData settings from `.env.example` for the reference setup. These same values connect tVhe live dashboard to TapData. Keep `.env` and real credentials out of Git.
+   For the reference setup, keep the other TapData settings from `.env.example`.
 
    From the dashboard folder, run:
 
