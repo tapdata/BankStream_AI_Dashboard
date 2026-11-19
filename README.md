@@ -29,12 +29,12 @@ The complete demo uses two repositories: **BankStream Feeder** simulates banking
 
 ## Deployment Guide
 
-For source database and TapData pipeline setup, follow the [BankStream Feeder README](https://github.com/umerwhu/BankStream_Feeder#readme). Once the published APIs are available, install and configure the dashboard below.
+For source database and TapData pipeline setup, follow the [BankStream Feeder README](https://github.com/tapdata/BankStream_Feeder#readme). Once the published APIs are available, install and configure the dashboard below.
 
 1. **Clone the dashboard repository.**
 
    ```sh
-   git clone https://github.com/umerwhu/BankStream_AI_Dashboard.git
+   git clone https://github.com/tapdata/BankStream_AI_Dashboard.git
    cd BankStream_AI_Dashboard
    ```
 
